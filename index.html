@@ -1,23 +1,29 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+<div class="row" style="margin-bottom:30px">
+  <div class="home col-md-8">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+    <div class="post-contents">
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;">
+	{{ post.content }}
+      </div>
+      <div style="height:50px;">
+	<a href="{{ post.url }}" class="readmore-button">Read More</a>
+      </div>
+    </div>
+    <br />
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  </div>
+  <div class="col-md-4">
+    <div class="post-contents">
+      <h3>About Me</h3>
+      <h4>I'm a 3rd year collage student, also a web developer. I love exporing cultures, learning languages and making BGM music!</h4>
+      <img src="{{ site.baseurl }}/img/me.jpg">
+    </div>
+    </div>
 </div>

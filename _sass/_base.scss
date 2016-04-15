@@ -104,8 +104,54 @@ a {
     }
 }
 
+/**
+ * Post-contents
+ */
+.post-contents {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #d9d9d9;
+    overflow: auto;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+.readmore-button {
+    text-align:center;
+    width: 150px;  
+    font-size: 22px;
+    color: #ff66b3;
+    background-color: white;
+    padding: 0;
+    border: 2px solid #ff66b3;
+    text-decoration:none;
+    padding: 8px;
+}
+.readmore-button:visited {
+    color: #ff66b3;
+}
+.readmore-button:hover {
+    text-decoration:none;
+    background-color: #ff66b3;
+    color: white;
+    transition: 0.8s;
+}
 
 
+.nav-button{
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border: 5px solid white;
+}
+.nav-button:hover{
+    border-bottom: 5px solid #ff66b3;
+    transition: 0.5s;
+}
 /**
  * Blockquotes
  */
