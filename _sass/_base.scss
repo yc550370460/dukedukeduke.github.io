@@ -182,7 +182,13 @@ a {
          transition: opacity 0.8s;
     }
 }
+.progress-bar-skill {
+    background-color: $brand-color;
+}
 
+.divider {
+    border: 0.5px solid #bfbfbf;
+}
 /**
  * Blockquotes
  */
