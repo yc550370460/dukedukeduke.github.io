@@ -3,6 +3,7 @@ layout: post
 title:  "Auf dem Wasser Zusingen"
 date:   2016-04-14 22:36:09 +0800
 categories: German
+comments: true
 ---
 
 Unter den Zweigen des östlichen Haines

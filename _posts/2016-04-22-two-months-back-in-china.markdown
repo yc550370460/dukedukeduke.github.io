@@ -3,6 +3,7 @@ layout: post
 title:  "Two Months Back In China"
 date:   2016-04-22 22:36:09 +0800
 categories: jekyll update
+comments: true
 ---
 It has been nearly two months since I came back from Japan. At the first several weeks, days were miserable for me, I sort of felt reverse culture shock. Things  like changing credits, and renew my residential card really bothered me, because staffs in public service positions lack knowledge about their workflow, along with their ignorant attitude.
 
