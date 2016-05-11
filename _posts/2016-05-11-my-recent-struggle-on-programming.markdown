@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My Recent Struggle In Programming"
-date:   2016-04-22 22:36:09 +0800
+date:   2016-05-11 20:17:09 +0800
 categories: jekyll update
 comments: true
 ---
