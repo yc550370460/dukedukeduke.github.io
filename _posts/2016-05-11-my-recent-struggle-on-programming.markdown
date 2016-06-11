@@ -2,8 +2,10 @@
 layout: post
 title:  "My Recent Struggle In Programming"
 date:   2016-05-11 20:17:09 +0800
-categories: jekyll update
 comments: true
+tags:
+- programming
+- life
 ---
 Recently, I’m finding out that a beginner learns fast in programming,but for a junior programmer, it’s actually hard to go step further. Sometimes, when facing a problem that is so hard for me, I became so anxious to know the answer, thus my would keep stressed mentally and physically for hours. If I found out the answer, I got relaxed, and thought these suffering worth, but if I can’t find out the answer, I would lose confidence, and sometimes doubting if I’m really suitable to become a great programmer.
 

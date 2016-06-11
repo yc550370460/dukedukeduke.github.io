@@ -2,8 +2,9 @@
 layout: post
 title:  "One week trying improvisation"
 date:   2016-04-27 20:09:09 +0800
-categories: jekyll update
 comments: true
+tags:
+- music
 ---
 This week I'm trying simle improvisation following instructions of Youtube video, it's really interesting because unlike normal composing, I don't have to care about writing scores, all it focuses on is the moment. The idea of living in this moment sounds like Zen, and I really want to develop that lifestyle.
 
