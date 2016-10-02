@@ -35,7 +35,7 @@ Enter same passphrase again: [press Enter]
 Your identification has been saved in /Users/user/.ssh/id_rsa.
 Your public key has been saved in /Users/user/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:0fYabGBIsB/y1ntMjdIozaySyEjvil71+qoagiaI91g user@MOMOKO.local
+**fingerprint**
 The key's randomart image is:
 +---[RSA 2048]----+
 |    ...          |
