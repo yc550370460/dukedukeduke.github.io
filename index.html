@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="row" style="margin-bottom:30px">
   <div class="home col-md-8">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <div class="post-contents">
       <h2>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -23,7 +23,32 @@ layout: default
     </div>
     <br />
     {% endfor %}
+
+    <div style="text-align:center">
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button page-button">&laquo;</a>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button current-page-button">{{ page }}</a>
+      {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button page-button">{{ page }}</a>
+      {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button page-button">{{ page }}</a>
+      {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button page-button">&raquo;</a>
+      {% endif %}
+    </div>
+    {% endif %}
+    </div>
   </div>
+
   <div class="col-md-4">
     <div class="post-contents">
       <i class="fa fa-tags">&nbsp;&nbsp; Tags</i><br />
