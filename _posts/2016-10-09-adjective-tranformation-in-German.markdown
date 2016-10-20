@@ -19,26 +19,25 @@ Okay... My mood turns into  `(´Д｀；)/ヽｧ・・・`
 
 So I made a small program in Python to help me 'remember' which transformation of adjective to use (ノД`)ハァ. 
 
-```
+```python
 def adj_transformation(adj, article, sex, case, plural):
     if case == 'accusative':
-		if sex == 'male':
-			adj += 'en'			
-		elif sex == 'female' or plural:
-			adj += 'e'
-		elif sex == 'neutral':
-			adj += 'es'
-		elif (article == 'meine' or 'keine') and plural:
-			adj += 'en'
+        if sex == 'male':
+            adj += 'en'			
+        elif sex == 'female' or plural:
+            adj += 'e'
+    	elif sex == 'neutral':
+    	    adj += 'es'
+    	elif (article == 'meine' or 'keine') and plural:
+    	    adj += 'en'
     elif case == 'nominative':
-		if sex == 'male':
-			adj += 'er'
-		else:
-			adj
+     	if sex == 'male':
+            adj += 'er'
+    	else:
+    	    adj
     elif case == 'dative':
-		adj += 'en'
-	return adj
-
+      	adj += 'en'
+    return adj
 
 adj = input('input adjective, regular transaformation only: ')
 article = input('input article between ein, eine, keine, meine: ')
@@ -49,7 +48,6 @@ plural = input('input 1 for plural, 0 for non-plural:')
 target_adj = adj_transformation(adj, article, sex, case, plural)
 print('correct transformation for ', adj, ' is ', target_adj)
 ```
-
 
 If I want to know the correct form of `alt (old)` in the sentence `Er is ein (alt) Mann`, run this program:
 
