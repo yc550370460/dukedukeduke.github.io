@@ -251,3 +251,12 @@
 	line-height: 31px;
     }
 }
+
+.mbtablestyle {
+    border-collapse: collapse;
+    width: 100%;
+    > table, td, th {
+        border: 1px solid black;
+	padding: 5px;
+    }
+}
