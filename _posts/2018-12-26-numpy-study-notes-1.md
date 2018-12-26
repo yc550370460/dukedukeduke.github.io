@@ -29,7 +29,6 @@ dt = np.dtype(np.int32)
 ```py
 a = np.array([[1,2,3],[4,5,6]])
 a.shape = (3,2)
-
 b = a.reshape((6, 1))
 ```
 
