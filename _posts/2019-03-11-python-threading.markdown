@@ -13,7 +13,7 @@ https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/chapte
 
 ## 定义一个线程
 ### threading.Thread
-```
+```ruby
 class threading.Thread(group=None,
                        target=None,
                        name=None,
@@ -26,7 +26,7 @@ class threading.Thread(group=None,
 - args: 传递给 target 的参数，要试用tuple类型
 - kwargs: 同上，试用字段类型dict
 ### samples
-```
+```ruby
 import threading
 
 def function(i):
@@ -45,7 +45,7 @@ for i in range(5):
 线程被创建之后并不会马上运行，需要手动调用 start() ， join() 让调用它的线程一直等待直到执行结束（即阻塞调用它的主线程， t 线程执行结束，主线程才会继续执行）。
 
 output:
-```
+```ruby
 >>>function called by thread 0
 >>>function called by thread 1
 >>>function called by thread 2
@@ -54,7 +54,7 @@ output:
 ```
 t.join() ，这意味着，t线程结束之前并不会看到后续的线程，换句话说，主线程会调用t线程，然后等待t线程完成再执行for循环开启下一个t线程，事实上，这段代码是顺序运行的，实际运行顺序永远是01234顺序出现。
 要纠正这种顺序， 需要将join单独拿出来，如下：
-```
+```ruby
 import threading
 
 def function(i):
@@ -73,7 +73,7 @@ for t in threads:
 ```
 ## 确定当前的线程
 每一个 Thread 实例创建的时候都有一个带默认值的名字，并且可以修改。
-```
+```ruby
 import threading
 import time
 
@@ -107,7 +107,7 @@ if __name__ == "__main__":
     t3.join()
 ```
 output:
-```
+```ruby
 first_function is Starting 
 second_function is Starting 
 third_function is Starting 
@@ -121,7 +121,7 @@ third_function is Exiting
 - 覆盖 __init__(self [,args]) 方法，可以添加额外的参数
 - 最后，需要覆盖 run(self, [,args]) 方法来实现线程要做的事情
 创建了新的 Thread 子类的时候，你可以实例化这个类，调用 start() 方法来启动它。线程启动之后将会执行 run() 方法。
-```
+```ruby
 import threading
 import time
 
@@ -165,7 +165,7 @@ print("Exiting Main Thread")
 为了简化问题，我们设有两个并发的线程（线程A和线程B)，需要资源1和资源2 .假设线程A需要资源1，线程B需要资源2 .在这种情况下，两个线程都使用各自的锁，目前为止没有冲突。现在假设，在双方释放锁之前，线程A 需要 资源2的锁，线程B 需要 资源1 的锁，没有资源线程不会继续执行。鉴于目前两个资源的锁都是被占用的，而且在对方的锁释放之前都处于等待且不释放锁的状态。这是死锁的典型情况。所以如上所说，使用锁来解决同步问题是一个可行却存在潜在问题的方案。
 ### Lock
 只能在lock release之后才能acquire成功(一次acquire对应一次release， 严格按照release之后才能acquire的规则， 包括重复获取同一个lock)， 否则一致阻塞在acquire这里。
-```
+```ruby
 # -*- coding: utf-8 -*-
 
 import threading
@@ -221,7 +221,7 @@ lock.acquire()和lock.release()可用with lock上下文来代替， 更为简洁
 ### RLock
 对于同一个lock, 重复获取不会阻塞（acquire之后并未release， 当前线程再去获取同一lock， 不会导致阻塞）。acquire多少次就必须release多少次，只有最后一次release才能改变RLock的状态为unlocked
 如下会导致阻塞：
-```
+```ruby
 import threading
 import time
 
@@ -254,7 +254,7 @@ if __name__ == '__main__':
         t.join()
 ```
 而下面不会阻塞：
-```
+```ruby
 import threading
 import time
 
@@ -292,7 +292,7 @@ if __name__ == '__main__':
 每当调用release()时，内置计数器+1，并让某个线程的acquire()从阻塞变为不阻塞。
 
 UrlProducer线程，爬取url，多个htmlSpider线程，爬取url对应的网页。如果直接开20个htmlSpider线程，20个线程是同时执行的，现在要限制同时执行能执行三个，就可以使用信号量来控制
-```
+```ruby
 import threading
 import time
 class htmlSpider(threading.Thread):
@@ -331,7 +331,7 @@ event.set()：将event的标志设置为True，调用wait方法的所有线程�
 event.clear()：将event的标志设置为False，调用wait方法的所有线程将被阻塞；
 
 event.isSet()：判断event的标志是否为True。
-```
+```ruby
 # encoding=utf8
 
 import threading
@@ -365,7 +365,7 @@ if __name__ == '__main__':
     main()
 ```
 ### queue
-```
+```ruby
 class Queue:
     """Create a queue object with a given maximum size.
 
@@ -380,7 +380,7 @@ Queue常用的方法有以下四个：
 - task_done(): 每次item被处理的时候需要调用这个方法
 - join(): 所有item都被处理之前一直阻塞
 
-```
+```ruby
 from threading import Thread, Event
 from Queue import Queue
 import time
