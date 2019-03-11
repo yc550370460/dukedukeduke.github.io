@@ -8,6 +8,7 @@ tags:
 - python3
 - concurrent
 ---
+## 参考
 https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/chapter4/02_Using_the_concurrent.futures_Python_modules.html#
 
 ## 介绍
@@ -41,6 +42,7 @@ max_workers 参数表示最多有多少个worker并行执行任务。
 - 顺序执行
 - 通过有5个worker的线程池执行
 - 通过有5个worker的进程池执行
+
 ```
 import concurrent.futures
 import time
