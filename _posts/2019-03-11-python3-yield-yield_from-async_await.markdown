@@ -117,7 +117,11 @@ https://blog.csdn.net/soonfly/article/details/78361819
 协程不能直接运行，需要把协程加入到事件循环（loop），由后者在适当的时候调用协程。asyncio.get_event_loop方法可以创建一个事件循环，然后使用run_until_complete将协程注册到事件循环，并启动事件循环。
 
 和asyncio.coroutine配合使用，yield from语法调用另一个协程。 
-使用async或者@asyncio.coroutine修饰将普通函数包装成异步函数（协程）。
+使用async或者@asyncio.coroutine修饰将普通函数包装成异步函数（协程）,但是为同步调用，便于理解；但是如果里层又要调用异步函数的话又可以用await或者yield from来调用。
+
+python的异步调用，必须用到eventloop。
+
+在“发出IO请求”到收到“IO完成”的这段时间里，同步IO模型下，主线程只能挂起，但异步IO模型下，主线程并没有休息，而是在消息循环中继续处理其他消息。这样，在异步IO模型下，一个线程就可以同时处理多个IO请求，并且没有切换线程的操作。
 
 ### async 和 await
 
