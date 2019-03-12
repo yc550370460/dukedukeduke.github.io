@@ -9,8 +9,7 @@
 title: Duke Yong
 email: duked.yang@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  >Nothing special, just coding.
-  >Forked from github: Adagio-cantabile.
+  Nothing special, just coding.  Forked from github: Adagio-cantabile.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "/" # the base hostname & protocol for your site
 github_username:  dukedukeduke
