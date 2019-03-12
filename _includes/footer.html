@@ -19,6 +19,12 @@
             {% include icon-github.html username=site.github_username %}
           </li>
           {% endif %}
+          
+          {% if site.github_appreciate %}
+          <li>forked from:
+            {% include icon-github.html username=site.github_appreciate %}
+          </li>
+          {% endif %}
 
           {% if site.twitter_username %}
           <li>
