@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="row" style="margin-bottom:30px">
-  <div class="home col-md-8">
+  <div class="home col-md-10">
     {% for post in paginator.posts %}
-    <div class="post-contents">
+    <div class="post-contents col-md-6">
       <h2>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
@@ -49,7 +49,7 @@ layout: default
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-2">
     <div class="post-contents">
       <i class="fa fa-tags">&nbsp;&nbsp; Tags</i><br />
       {% for tag in site.tags %}
