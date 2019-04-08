@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Duke Yong
+title: Panda sites
 email: duked.yang@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Nothing special, just coding.  Forked from github: Adagio-cantabile.
+  Panda images you may like, and upload photoes taken in China Chengdu.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "/" # the base hostname & protocol for your site
-github_username:  dukedukeduke
+github_username:  yc550370460
 github_appreciate: Adagio-cantabile
 
 # Gems settings
